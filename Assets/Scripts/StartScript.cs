@@ -7,7 +7,6 @@ public class StartScript : MonoBehaviour
 {
     public void start()
     {
-        // Change scene 
         SceneManager.LoadScene("game");
     }
 }
