@@ -7507,6 +7507,7 @@ GameObject:
   - component: {fileID: 1232239452}
   - component: {fileID: 1232239451}
   - component: {fileID: 1232239454}
+  - component: {fileID: 1232239455}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7632,6 +7633,19 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1232239455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232239450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c213b6e35952c4d9bb42f8738bd0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1868820850}
 --- !u!1 &1361238035
 GameObject:
   m_ObjectHideFlags: 0
@@ -62062,6 +62076,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1868820850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4659033004940308142, guid: 6b12abdba910c244fa6b448c6c008b12, type: 3}
+  m_PrefabInstance: {fileID: 5995321237511447517}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1929516623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62362,15 +62381,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2775272794865635046, guid: 6b12abdba910c244fa6b448c6c008b12, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2775272794865635046, guid: 6b12abdba910c244fa6b448c6c008b12, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2775272794865635046, guid: 6b12abdba910c244fa6b448c6c008b12, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2775272794865635046, guid: 6b12abdba910c244fa6b448c6c008b12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
