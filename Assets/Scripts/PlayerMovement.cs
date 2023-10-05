@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // **Player Movement**
     public float moveSpeed;
     public Rigidbody2D rb;
     public float rotationSpeed;
     private Vector2 movement;
+    //  *     *     *    *
 
     void Start()
     {
@@ -17,9 +19,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // **Player Movement**
         float movementX = Input.GetAxisRaw("Horizontal");
         float movementY = Input.GetAxisRaw("Vertical");
         movement = new Vector2(movementX, movementY);
+        //  *     *     *    *
+
+
     }
 
     void FixedUpdate()
