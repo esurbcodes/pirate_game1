@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8081670213398415864}
   - component: {fileID: 2942178500442833721}
   - component: {fileID: 6335430442567262818}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: cannonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 8306878387803381966}
   - component: {fileID: 7366609225453504716}
   - component: {fileID: 5683979889100874010}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: cannonball trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
