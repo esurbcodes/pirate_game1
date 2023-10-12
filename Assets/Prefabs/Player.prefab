@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101701293560912532}
   - component: {fileID: 1673203751956759004}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: PlayerGraphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3421057660981949026}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Firing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4971770821771943464}
   - component: {fileID: 6894338948152179391}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: R_Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4176195519254407164}
   - component: {fileID: 1454450225829577286}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: L_Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 894575495231389404}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: CameraTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 6905264762629980046}
   - component: {fileID: 9013986793490608776}
   - component: {fileID: 1265586061612138050}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8081670213398415864}
   - component: {fileID: 2942178500442833721}
   - component: {fileID: 6335430442567262818}
-  m_Layer: 8
+  - component: {fileID: 4719966513496799441}
+  m_Layer: 12
   m_Name: cannonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,6 +152,33 @@ PolygonCollider2D:
       - {x: 0.03240323, y: 0.037450254}
       - {x: 0.022203244, y: 0.04424215}
   m_UseDelaunayMesh: 0
+--- !u!50 &4719966513496799441
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688028727973347117}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3594930884258110062
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +190,7 @@ GameObject:
   - component: {fileID: 8306878387803381966}
   - component: {fileID: 7366609225453504716}
   - component: {fileID: 5683979889100874010}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: cannonball trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
