@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // **Player Health **
+    public float Health;
+    //  *     *     *    *
+
+    // **Player Firing**
+    public GameObject cannonBall;
+    //  *     *     *    *
+
     // **Player Movement**
     public float moveSpeed;
     public Rigidbody2D rb;
@@ -25,25 +33,32 @@ public class PlayerMovement : MonoBehaviour
         movement = new Vector2(movementX, movementY);
         //  *     *     *    *
 
-
+        // **When fire button is pressed 
+        if(Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(cannonBall);
+        }
     }
 
     void FixedUpdate()
     {
+        // **Player Movement**
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
         RotateDirection();
-
+        //  *     *     *    *
     }
 
     private void RotateDirection()
     {
-        if(movement != Vector2.zero)
+        // **Player Movement**
+        if (movement != Vector2.zero)
         {
             Quaternion playerRotation = Quaternion.LookRotation(transform.forward, movement);
             Quaternion rotation = Quaternion.RotateTowards(transform.rotation, playerRotation, rotationSpeed * Time.deltaTime);
             rb.MoveRotation(rotation);
         }
+        //  *     *     *    *
     }
 
-  
+
 }

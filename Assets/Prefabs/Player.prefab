@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774328017564196463}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -142,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3035328749013496502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1201, y: 0.183, z: 0}
+  m_LocalPosition: {x: 0.169, y: 0.183, z: 0}
   m_LocalScale: {x: 0.375, y: 0.35250002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3484717175157009569}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.135, y: 0.183, z: 0}
+  m_LocalPosition: {x: -0.174, y: 0.183, z: 0}
   m_LocalScale: {x: 0.375, y: 0.35250002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -393,6 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77023066f7b580f48970926e2b9e73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Health: 0
+  cannonBall: {fileID: 0}
   moveSpeed: 5
   rb: {fileID: 3403064869845924671}
   rotationSpeed: 720
