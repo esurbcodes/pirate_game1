@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3520344858382589846}
   - component: {fileID: 4844220393513320519}
   - component: {fileID: 1826563402731596013}
+  - component: {fileID: 8437268603937608013}
   m_Layer: 12
   m_Name: cannonBall
   m_TagString: Untagged
@@ -166,3 +167,16 @@ PolygonCollider2D:
       - {x: 0.049999997, y: 0.04}
       - {x: 0.04, y: 0.049999997}
   m_UseDelaunayMesh: 0
+--- !u!114 &8437268603937608013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619793201567794642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a89bec248989b24e94b9a473f4735dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShootSpeed: 50
