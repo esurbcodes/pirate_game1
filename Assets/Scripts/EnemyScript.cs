@@ -5,7 +5,12 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     public Transform player;
+    public Transform target;
+    
     public float moveSpeed = 5f;
+    public float rotSpeed;
+    public float rotationModifier;
+
     private Rigidbody2D rb;
     private Vector2 movement;
 
@@ -28,6 +33,14 @@ public class EnemyScript : MonoBehaviour
     private void FixedUpdate()
     {
         moveCharacter(movement);
+
+        //Rotate
+        Vector3 vectorToTarget = player.position - transform.position;
+
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - rotationModifier;
+
+        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * rotSpeed);
     }
 
     void moveCharacter(Vector2 direction)
