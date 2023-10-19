@@ -19,6 +19,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     //  *     *     *    *
 
+    public TreasureManager tm; //call treasuremanager script
+    private System.Random rand = new System.Random(); //random variable for treasure respawn
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,6 +62,27 @@ public class PlayerMovement : MonoBehaviour
             rb.MoveRotation(rotation);
         }
         //  *     *     *    *
+    }
+
+    private IEnumerator Respawn(Collider2D other, int time)
+    {
+        yield return new WaitForSeconds(time);
+        //do da things
+        other.gameObject.SetActive(true);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("treasure"))
+        {
+            other.gameObject.SetActive(false);
+            tm.treasureCount++;
+            StartCoroutine(Respawn(other, 5)); //set timer for 5 seconds 
+        }
+        other.gameObject.SetActive(false);
+        //code for random respawn
+        StartCoroutine(Respawn(other, rand.Next(5, 10)));
+      
     }
 
 
