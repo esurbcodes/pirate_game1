@@ -19,8 +19,10 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     //  *     *     *    *
 
+    // **Treasure**
     public TreasureManager tm; //call treasuremanager script
     private System.Random rand = new System.Random(); //random variable for treasure respawn
+    //  *     *     *    *
 
 
     void Start()
@@ -40,8 +42,9 @@ public class PlayerMovement : MonoBehaviour
         // **When fire button is pressed 
         if(Input.GetButtonDown("Fire1"))
         {
-            Instantiate(cannonBall);
+            Instantiate(cannonBall,this.transform.position,Quaternion.identity);
         }
+        //  *     *     *    *
     }
 
     void FixedUpdate()

@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    //  *   *  Enemy AI  *    *
     public Transform player;
     public Transform target;
     
     public float moveSpeed = 5f;
     public float rotSpeed;
     public float rotationModifier;
+    //  *     *     *    *    *
+
+    //  *     Enemy Health    *
+    public float health;
+    //  *     *     *    *    *
 
     private Rigidbody2D rb;
+    //  *    Enemy Movement   *
     private Vector2 movement;
+    //  *     *     *    *    *
 
 
     void Start()
@@ -22,16 +30,20 @@ public class EnemyScript : MonoBehaviour
 
     void Update()
     {
+        //  *   *  Enemy AI  *    *
         Vector3 direction = player.position - transform.position;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.rotation = angle;
         direction.Normalize();
         movement = direction;
+        //  *     *     *    *    *
     }
 
+    //  *   *  Enemy AI  *    *
     private void FixedUpdate()
     {
+
         moveCharacter(movement);
 
         //Rotate
@@ -47,4 +59,5 @@ public class EnemyScript : MonoBehaviour
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
+    //  *     *     *    *    *
 }
