@@ -40,6 +40,26 @@ public class EnemyScript : MonoBehaviour
         //  *     *     *    *    *
     }
 
+    //  *     Enemy Health    *
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("CannonBall"))
+        {
+            Destroy(other.gameObject);
+            //reduce health after hit
+            health = health - 1;
+
+            //Game over after health gone
+            //if(health < 0)
+            //{
+            //    GameObject gameUI = GameObject.Find("GameUI");
+            //    gameUI.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
+            //    Destroy(this.gameObject);
+            //}
+        }
+    }
+    //  *     *     *    *    *
+
     //  *   *  Enemy AI  *    *
     private void FixedUpdate()
     {
