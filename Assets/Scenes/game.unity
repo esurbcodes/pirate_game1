@@ -3734,6 +3734,7 @@ MonoBehaviour:
   moveSpeed: 2.7
   rotSpeed: 3
   rotationModifier: -90
+  health: 0
 --- !u!1 &226794841
 GameObject:
   m_ObjectHideFlags: 0
@@ -62425,7 +62426,7 @@ GameObject:
   - component: {fileID: 2024514702}
   - component: {fileID: 2024514701}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GameUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

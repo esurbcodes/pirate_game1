@@ -6,6 +6,7 @@ TagManager:
   tags:
   - collectible
   - treasure
+  - CannonBall
   layers:
   - Default
   - TransparentFX
