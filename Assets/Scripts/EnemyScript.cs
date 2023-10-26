@@ -27,6 +27,7 @@ public class EnemyScript : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody2D>();
         health = 2;
+        Debug.Log(health);
     }
 
     void Update()
@@ -65,13 +66,15 @@ public class EnemyScript : MonoBehaviour
             health = health - 1;
 
             //Game over after health gone
-            if (health =< 0)
+            if (health < 0)
             {
                 GameObject gameUI = GameObject.Find("GameUI");
                 gameUI.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
                 Destroy(this.gameObject);
             }
         }
+
+        Debug.Log(health);
     }
     //  *     *     *    *    *
 

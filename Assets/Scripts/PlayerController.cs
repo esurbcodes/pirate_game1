@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         health = 8;
+        Debug.Log(health);
     }
 
     // Update is called once per frame
@@ -106,19 +107,22 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // ** sprite checking for the ontrigger**
-        if (other.gameObject.CompareTag("Sprite"))
+        if (other.gameObject.CompareTag("Sprites"))
         {
+                
             //reduce health after hit
             health = health - 1;
 
             //Game over after health gone
-            if (health =< 0)
+            if (health < 0)
             {
                 GameObject gameUI = GameObject.Find("GameUI");
                 gameUI.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
                 Destroy(this.gameObject);
             }
         }
+
+        Debug.Log(health);
 
     }
     //  *     *     *    *     *      *
