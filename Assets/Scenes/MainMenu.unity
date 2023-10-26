@@ -7960,7 +7960,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pirate \nGame"
+  m_text: "Sea of \nBattle"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6f4970d34d7ef834c9162ddbb35258d2, type: 2}
   m_sharedMaterial: {fileID: 7336479309348349277, guid: 6f4970d34d7ef834c9162ddbb35258d2, type: 2}
