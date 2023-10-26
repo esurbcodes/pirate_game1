@@ -44,7 +44,12 @@ public class PlayerMovement : MonoBehaviour
         // **When fire button is pressed 
         if(Input.GetButtonDown("Fire1"))
         {
-            Instantiate(cannonBall,this.transform.position,Quaternion.identity);
+            var direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+            var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            
+
+            Instantiate(cannonBall,this.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
+
         }
         //  *     *     *    *
     }

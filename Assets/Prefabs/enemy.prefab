@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7523963009945284519}
   - component: {fileID: 8953478885875559570}
   - component: {fileID: 2696531490215843471}
+  - component: {fileID: 804341465664678035}
   m_Layer: 10
   m_Name: enemy
   m_TagString: Untagged
@@ -98,9 +99,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 5
+  m_LinearDrag: 2
+  m_AngularDrag: 0.08
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -218,3 +219,21 @@ PolygonCollider2D:
       - {x: 0.1888169, y: -0.2520665}
       - {x: 0.1997635, y: -0.08666465}
   m_UseDelaunayMesh: 0
+--- !u!114 &804341465664678035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8800052786693355672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 611785c1a23eb2a40816a93f004ac369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2192150616149103789}
+  target: {fileID: 2775272794865635046, guid: 6b12abdba910c244fa6b448c6c008b12, type: 3}
+  moveSpeed: 2.7
+  rotSpeed: 3
+  rotationModifier: -90
+  health: 0

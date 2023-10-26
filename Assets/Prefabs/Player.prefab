@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101701293560912532}
   - component: {fileID: 1673203751956759004}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: PlayerGraphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3421057660981949026}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Firing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4971770821771943464}
   - component: {fileID: 6894338948152179391}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: R_Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4176195519254407164}
   - component: {fileID: 1454450225829577286}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: L_Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 894575495231389404}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: CameraTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,9 +329,9 @@ GameObject:
   - component: {fileID: 6905264762629980046}
   - component: {fileID: 9013986793490608776}
   - component: {fileID: 1265586061612138050}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -366,9 +366,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_Mass: 5
+  m_LinearDrag: 2
+  m_AngularDrag: 0.08
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -379,7 +379,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &6905264762629980046
 MonoBehaviour:
@@ -393,11 +393,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77023066f7b580f48970926e2b9e73c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
-  cannonBall: {fileID: 0}
+  health: 0
+  cannonBall: {fileID: 5619793201567794642, guid: 2b6795d8cf49fa341a2d4b4a9ce0519d, type: 3}
   moveSpeed: 5
   rb: {fileID: 3403064869845924671}
-  rotationSpeed: 720
+  rotationSpeed: 400
+  tm: {fileID: 0}
 --- !u!60 &9013986793490608776
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -516,7 +517,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.01
+  m_Time: 0.1
   m_PreviewTimeScale: 0
   m_Parameters:
     serializedVersion: 3
@@ -534,7 +535,34 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.24860336
+        value: 0.3333434
+        inSlope: -0.07052758
+        outSlope: -0.07052758
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.41914275
+        value: 0.094339624
+        inSlope: -0.06542015
+        outSlope: -0.06542015
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7206704
+        value: 0
+        inSlope: 0.000618748
+        outSlope: 0.000618748
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.7234637
         value: 0
         inSlope: 0
         outSlope: 0
@@ -584,6 +612,6 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0
   m_MaskInteraction: 0
-  m_Autodestruct: 1
+  m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
