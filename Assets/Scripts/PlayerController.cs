@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // **Player Health **
-    public float Health;
+    public float health;
     //  *     *     *    *
 
     // **Player Firing**
@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        health = 8;
     }
 
     // Update is called once per frame
@@ -74,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
         other.gameObject.SetActive(true);
     }
 
+
+    //   *  *  * Trigger Checks  *  *  *
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.CompareTag("treasure"))
@@ -85,8 +88,39 @@ public class PlayerMovement : MonoBehaviour
         other.gameObject.SetActive(false);
         //code for random respawn
         StartCoroutine(Respawn(other, rand.Next(5, 10)));
-      
-    }
 
+        // ** cannon ball checking for the ontrigger**
+        if (other.gameObject.CompareTag("CannonBall"))
+        {
+            Destroy(other.gameObject);
+            //reduce health after hit
+            health = health - 1;
+
+            //Game over after health gone
+            if (health < 0)
+            {
+                GameObject gameUI = GameObject.Find("GameUI");
+                gameUI.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
+                Destroy(this.gameObject);
+            }
+        }
+
+        // ** sprite checking for the ontrigger**
+        if (other.gameObject.CompareTag("Sprite"))
+        {
+            //reduce health after hit
+            health = health - 1;
+
+            //Game over after health gone
+            if (health =< 0)
+            {
+                GameObject gameUI = GameObject.Find("GameUI");
+                gameUI.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
+                Destroy(this.gameObject);
+            }
+        }
+
+    }
+    //  *     *     *    *     *      *
 
 }

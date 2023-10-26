@@ -26,6 +26,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        health = 2;
     }
 
     void Update()
@@ -50,12 +51,26 @@ public class EnemyScript : MonoBehaviour
             health = health - 1;
 
             //Game over after health gone
-            //if(health < 0)
-            //{
-            //    GameObject gameUI = GameObject.Find("GameUI");
-            //    gameUI.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
-            //    Destroy(this.gameObject);
-            //}
+            if (health < 0)
+            {
+                Destroy(this.gameObject);
+            }
+
+        }
+
+        // ** sprite checking for the ontrigger**
+        if (other.gameObject.CompareTag("Sprite"))
+        {
+            //reduce health after hit
+            health = health - 1;
+
+            //Game over after health gone
+            if (health =< 0)
+            {
+                GameObject gameUI = GameObject.Find("GameUI");
+                gameUI.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
+                Destroy(this.gameObject);
+            }
         }
     }
     //  *     *     *    *    *
