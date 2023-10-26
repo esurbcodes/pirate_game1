@@ -49,13 +49,7 @@ public class EnemyScript : MonoBehaviour
             //reduce health after hit
             health = health - 1;
 
-            //Game over after health gone
-            //if(health < 0)
-            //{
-            //    GameObject gameUI = GameObject.Find("GameUI");
-            //    gameUI.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
-            //    Destroy(this.gameObject);
-            //}
+           
         }
     }
     //  *     *     *    *    *
