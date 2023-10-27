@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
         }
         other.gameObject.SetActive(false);
         //code for random respawn
-        StartCoroutine(Respawn(other, rand.Next(5, 10)));
+       // StartCoroutine(Respawn(other, rand.Next(5, 10)));
 
         // ** cannon ball checking for the ontrigger**
         if (other.gameObject.CompareTag("CannonBall"))
@@ -103,11 +103,14 @@ public class PlayerMovement : MonoBehaviour
             health = health - 1;
 
             //Game over after health gone
-            if (health < 0)
+            if (health = 0)
             {
                 GameObject gameUI = GameObject.Find("GameUI");
                 gameUI.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
                 Destroy(this.gameObject);
+
+                //code for random respawn
+                StartCoroutine(Respawn(other, rand.Next(5, 10)));
             }
         }
 
