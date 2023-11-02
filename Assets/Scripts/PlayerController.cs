@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
             health = health - 1;
 
             //Game over after health gone
-            if (health < 0)
+            if (health == 0)
             {
                 GameObject gameUI = GameObject.Find("GameUI");
                 gameUI.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
